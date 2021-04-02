@@ -8,12 +8,11 @@
 
 using namespace std;
 
-void main() {
-	Calculator calculator = Calculator();
+int main() {
 	bool repeat = true;
 	do {
 		char selection = ' ';
-		cout << "Current Value: " << calculator.getValue() << '\n';
+		cout << "Current Value: " << Calculator::getValue() << '\n';
 		cout << "Select Option:\n";
 		cout << "[a] add, [s] subtract [m] multiply [d] divide [v] show value [c] clear value [e] exit\n";
 		cout << "Your selection: ";
@@ -24,23 +23,23 @@ void main() {
 		case 'a':
 			cout << "Enter value to add: ";
 			cin >> value;
-			calculator.add(value);
+			Calculator::add(value);
 			break;
 		case 's':
 			cout << "Enter value to subtract: ";
 			cin >> value;
-			calculator.subtract(value);
+			Calculator::subtract(value);
 			break;
 		case 'm':
 			cout << "Enter value to multiply: ";
 			cin >> value;
-			calculator.multiply(value);
+			Calculator::multiply(value);
 			break;
 		case 'd':
 			cout << "Enter value to divide: ";
 			cin >> value;
 			if (value != 0) {
-				calculator.divide(value);
+				Calculator::divide(value);
 			} else {
 				cout << "Cannot divide by 0!\n";
 			}
@@ -49,7 +48,7 @@ void main() {
 			// The value will be shown at top, so nothing needed here
 			break;
 		case 'c':
-			calculator.clearValue();
+			Calculator::clearValue();
 			break;
 		case 'e':
 			repeat = false;

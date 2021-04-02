@@ -1,7 +1,8 @@
 #include "Calculator.h"
 
+double Calculator::mValue = 0;
+
 Calculator::Calculator() 
-	: mValue(0.0)
 {}
 
 Calculator::~Calculator() {}

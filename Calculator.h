@@ -2,21 +2,21 @@
 
 class Calculator {
 private:
-	double mValue;
-
+	static double mValue;
+	Calculator(); // Constructor is private so users cannot instantiate the class. 
 public:
-	Calculator();
+	
 	~Calculator();
 
-	void add(double value);
+	static void add(double value);
 
-	void subtract(double value);
+	static void subtract(double value);
 
-	void multiply(double value);
+	static void multiply(double value);
 
-	void divide(double value);
+	static void divide(double value);
 
-	double getValue();
+	static double getValue();
 
-	void clearValue();
+	static void clearValue();
 };
