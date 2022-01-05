@@ -1,6 +1,3 @@
-/*
-	CSCI 3323 - Assignment #2 Possible Solution
-*/
 
 #include <iostream>
 
